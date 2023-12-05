@@ -21,8 +21,10 @@ class MealDetail extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Image.network(mealinfo.imageUrl,
-                width: double.infinity, height: 250, fit: BoxFit.cover),
+             Hero(tag: mealinfo.id,
+              child: Image.network(mealinfo.imageUrl,
+                  width: double.infinity, height: 250, fit: BoxFit.cover),
+            ),
             SizedBox(
               height: 15,
             ),
