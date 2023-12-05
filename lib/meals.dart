@@ -86,12 +86,14 @@ class MealsScreen extends StatelessWidget {
                             },
                             child: Stack(
                               children: [
-                                FadeInImage(
-                                    width: double.infinity,
-                                    fit: BoxFit.cover,
-                                    height: 200,
-                                    placeholder: MemoryImage(kTransparentImage),
-                                    image: NetworkImage(meals[index].imageUrl)),
+                                Hero(tag: meals[index].id,
+                                  child: FadeInImage(
+                                      width: double.infinity,
+                                      fit: BoxFit.cover,
+                                      height: 200,
+                                      placeholder: MemoryImage(kTransparentImage),
+                                      image: NetworkImage(meals[index].imageUrl)),
+                                ),
                                 Positioned(
                                     bottom: 0,
                                     right: 0,
